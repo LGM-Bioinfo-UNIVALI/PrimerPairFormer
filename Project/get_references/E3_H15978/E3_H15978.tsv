@@ -1,0 +1,37 @@
+0	20	20	40.1	100.000	20	1.3	0	0	91	91	PREDICTED: Perca flavescens cadherin 17 (cdh17), mRNA	Perca flavescens	0	2	21	2330	2349
+0	20	20	40.1	100.000	20	1.3	0	0	91	91	Coccinella septempunctata genome assembly, chromosome: 6	Coccinella septempunctata	0	1	20	25348672	25348691
+0	20	20	40.1	100.000	20	1.3	0	0	91	91	PREDICTED: Perca fluviatilis cadherin 17, LI cadherin (liver-intestine) (cdh17), mRNA	Perca fluviatilis	0	2	21	2406	2425
+0	20	20	40.1	100.000	20	1.3	0	0	91	91	PREDICTED: Sander lucioperca cadherin 17, LI cadherin (liver-intestine) (cdh17), mRNA	Sander lucioperca	0	2	21	2541	2560
+0	19	19	38.2	100.000	19	5.3	0	0	95	86	Mastacembelus armatus genome assembly, chromosome: 19	Mastacembelus armatus	0	2	20	3825780	3825762
+0	16	16	32.2	100.000	16	326	0	0	95	73	Mastacembelus armatus genome assembly, chromosome: 19	Mastacembelus armatus	0	7	22	14103322	14103307
+0	19	19	38.2	100.000	19	5.3	0	0	95	86	Helicobacter acinonychis isolate 212_9 genome assembly, chromosome: I	Helicobacter acinonychis	0	3	21	762577	762559
+0	16	16	32.2	100.000	16	326	0	0	95	73	Helicobacter acinonychis isolate 212_9 genome assembly, chromosome: I	Helicobacter acinonychis	0	1	16	1038789	1038774
+0	19	19	38.2	100.000	19	5.3	0	0	86	86	Methanosarcina mazei C16, complete genome	Methanosarcina mazei C16	0	2	20	1574637	1574619
+0	19	19	38.2	100.000	19	5.3	0	0	91	86	Tridacna crocea genome assembly, chromosome: 8	Tridacna crocea	0	2	20	25205573	25205555
+0	17	17	34.2	100.000	17	82	0	0	91	77	Tridacna crocea genome assembly, chromosome: 8	Tridacna crocea	0	1	17	13036573	13036589
+0	16	16	32.2	100.000	16	326	0	0	91	73	Tridacna crocea genome assembly, chromosome: 8	Tridacna crocea	0	3	18	36097363	36097378
+0	19	19	38.2	100.000	19	5.3	0	0	86	86	Gibbula magus genome assembly, chromosome: 5	Gibbula magus	0	4	22	45319903	45319885
+0	19	19	38.2	100.000	19	5.3	0	0	95	86	Accipiter gentilis genome assembly, chromosome: 8	Accipiter gentilis	0	3	21	10909232	10909214
+0	17	17	34.2	100.000	17	82	0	0	95	77	Accipiter gentilis genome assembly, chromosome: 8	Accipiter gentilis	0	1	17	15779434	15779418
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Myocastor coypus mitochondrion, complete genome	Myocastor coypus	0	1	22	15914	15893
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Toromys rhipidurus mitochondrion, complete genome	Toromys rhipidurus	0	1	22	15916	15895
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Toromys albiventris mitochondrion, complete genome	Toromys albiventris	0	1	22	15905	15884
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Makalata macrura mitochondrion, complete genome	Makalata macrura	0	1	22	15916	15895
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG22 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	379	358
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG22 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	418	397
+1	22	18	36.2	95.455	21	21	0	0	100	100	Georychus capensis isolate CG22 control region, partial sequence; mitochondrial	Georychus capensis	1	1	22	457	436
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG21 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	379	358
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG21 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	418	397
+1	22	18	36.2	95.455	21	21	0	0	100	100	Georychus capensis isolate CG21 control region, partial sequence; mitochondrial	Georychus capensis	1	1	22	457	436
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG20 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	379	358
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG20 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	418	397
+1	22	18	36.2	95.455	21	21	0	0	100	100	Georychus capensis isolate CG20 control region, partial sequence; mitochondrial	Georychus capensis	1	1	22	457	436
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG19 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	379	358
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG19 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	418	397
+1	22	18	36.2	95.455	21	21	0	0	100	100	Georychus capensis isolate CG19 control region, partial sequence; mitochondrial	Georychus capensis	1	1	22	457	436
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG18 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	379	358
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG18 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	418	397
+1	22	18	36.2	95.455	21	21	0	0	100	100	Georychus capensis isolate CG18 control region, partial sequence; mitochondrial	Georychus capensis	1	1	22	457	436
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG17 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	379	358
+1	22	22	44.1	100.000	22	0.086	0	0	100	100	Georychus capensis isolate CG17 control region, partial sequence; mitochondrial	Georychus capensis	0	1	22	418	397
+1	22	18	36.2	95.455	21	21	0	0	100	100	Georychus capensis isolate CG17 control region, partial sequence; mitochondrial	Georychus capensis	1	1	22	457	436

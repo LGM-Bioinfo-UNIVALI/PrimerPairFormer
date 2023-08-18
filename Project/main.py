@@ -9,17 +9,38 @@ from Bio import Align
 
 primers = pd.read_csv('primers.csv', sep=';')
 
+def count_ambiguous(seq):
+	iupac_table = {
+		'W': ['A', 'T'],
+		'S': ['C', 'G'],
+		'M': ['A', 'C'],
+		'K': ['G', 'T'],
+		'R': ['A', 'G'],
+		'Y': ['C', 'T'],
+		'B': ['C', 'G', 'T'],
+		'D': ['A', 'G', 'T'],
+		'H': ['A', 'C', 'T'],
+		'V': ['A', 'C', 'G'],
+		'N': ['A', 'C', 'G', 'T'],
+	}
+	count = 0
+	for base in seq:
+		if base in iupac_table.keys():
+			count += 1
 
+	return count
 
 primers_sequences = []
 for index, primer in primers.iterrows():
-	new_record = SeqRecord(
-		Seq(primer['nuc']),
-		id = str(primer['id']),
-		description='primer'
-	)
+	ambiguous_count = count_ambiguous(primer['nuc'])
+	if ambiguous_count <= 2:
+		new_record = SeqRecord(
+			Seq(primer['nuc']).reverse_complement(),
+			id = str(primer['id']),
+			description='primer'
+		)
 
-	primers_sequences.append(new_record)
+		primers_sequences.append(new_record)
 
 SeqIO.write(primers_sequences, 'primers.fasta', "fasta")
 
@@ -70,7 +91,6 @@ def get_mismatches(reference_sequence, matched_sequence, pos, primer):
 				    if iupac_base == iupac_base2:
 				        mismatches -= 1
 
-	print(mismatches, '/', len(primer))
 	# print(f'{mismatches}/{len(primer)}')
 	return mismatches
 
@@ -88,11 +108,11 @@ for reference in os.listdir('references'):
 	basename = basename.replace('.fa', '')
 	basename = basename.replace('.fna', '')
 	print(basename)
-	# subprocess.run(
-	# 	f'mafft --anysymbol --keeplength --addfragments primers.fasta references/{reference} > results/{basename}_alignment.fasta',
-	# 	shell=True,
-	# 	executable='/bin/bash'
-	# )
+	subprocess.run(
+		f'mafft --anysymbol --keeplength --addfragments primers.fasta references/{reference} > results/{basename}_alignment.fasta',
+		shell=True,
+		executable='/bin/bash'
+	)
 
 	alignment_file = f'results/{basename}_alignment.fasta'
 
@@ -113,7 +133,7 @@ for reference in os.listdir('references'):
 				if basename not in list(results_dict.keys()):
 					results_dict[basename] = []
 
-				results_dict[basename].append(alignment_start_pos)
+				
 				break
 
 		if alignment_start_pos != -1:
@@ -123,7 +143,12 @@ for reference in os.listdir('references'):
 					matched_sequence += base
 				else:
 					break
-			get_mismatches(reference_sequence, matched_sequence, i, primers_dict[sequence.id])
+			mismatches = get_mismatches(reference_sequence, matched_sequence, i, primers_dict[sequence.id])
+
+			if mismatches != '?I' and mismatches <= 1:
+				results_dict[basename].append(alignment_start_pos)
+			else:
+				results_dict[basename].append(None)
 
 		if alignment_start_pos == -1:
 			if sequence.id not in results_dict['Primer']:
@@ -134,5 +159,5 @@ for reference in os.listdir('references'):
 
 	
 print(repeated_primers_mismatches)
-# df = pd.DataFrame(results_dict)
-# df.to_csv('results/results.tsv', sep='\t', index=False)
+df = pd.DataFrame(results_dict)
+df.to_csv('results/results6_revcomp_less_degenerated.tsv', sep='\t', index=False)
