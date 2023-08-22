@@ -1,0 +1,263 @@
+0	19	19	38.2	100.000	19	5.3	0	0	90	90	PREDICTED: Pungitius pungitius pentatricopeptide repeat domain 1 (ptcd1), mRNA	Pungitius pungitius	0	2	20	559	577
+0	18	18	36.2	100.000	18	21	0	0	86	86	Miltochrista miniata genome assembly, chromosome: 24	Miltochrista miniata	0	2	19	16695893	16695910
+0	18	18	36.2	100.000	18	21	0	0	86	86	Miltochrista miniata genome assembly, chromosome: 2	Miltochrista miniata	0	2	19	24114044	24114061
+0	18	18	36.2	100.000	18	21	0	0	86	86	Miltochrista miniata genome assembly, chromosome: 18	Miltochrista miniata	0	2	19	6714938	6714955
+0	18	18	36.2	100.000	18	21	0	0	86	86	Miltochrista miniata genome assembly, chromosome: 15	Miltochrista miniata	0	2	19	3003397	3003414
+0	18	18	36.2	100.000	18	21	0	0	86	86	Mythimna albipuncta genome assembly, chromosome: Z	Mythimna albipuncta	0	2	19	10624129	10624146
+0	18	18	36.2	100.000	18	21	0	0	86	86	Leuctra nigra genome assembly, chromosome: 1	Leuctra nigra	0	2	19	46536338	46536321
+0	18	18	36.2	100.000	18	21	0	0	86	86	Miltochrista miniata genome assembly, chromosome: 12	Miltochrista miniata	0	2	19	15162023	15162006
+0	18	18	36.2	100.000	18	21	0	0	86	86	Branchiostoma lanceolatum genome assembly, chromosome: 9	Branchiostoma lanceolatum	0	4	21	22160616	22160599
+0	18	18	36.2	100.000	18	21	0	0	86	86	Polynucleobacter sp. JS-JIR-II-50 chromosome	Polynucleobacter sp. JS-JIR-II-50	0	1	18	1604150	1604133
+1	18	18	36.2	100.000	18	21	0	0	95	86	Coregonus sp. 'balchen' genome assembly, chromosome: 8	Coregonus sp. 'balchen'	0	4	21	39921862	39921879
+1	20	16	32.2	95.000	19	326	0	0	95	95	Coregonus sp. 'balchen' genome assembly, chromosome: 8	Coregonus sp. 'balchen'	1	2	21	19539911	19539892
+1	18	18	36.2	100.000	18	21	0	0	95	86	Coregonus sp. 'balchen' genome assembly, chromosome: 4	Coregonus sp. 'balchen'	0	4	21	52041051	52041068
+1	20	16	32.2	95.000	19	326	0	0	95	95	Coregonus sp. 'balchen' genome assembly, chromosome: 4	Coregonus sp. 'balchen'	1	2	21	2361877	2361858
+1	20	16	32.2	95.000	19	326	0	0	95	95	Coregonus sp. 'balchen' genome assembly, chromosome: 4	Coregonus sp. 'balchen'	1	2	21	10772304	10772323
+1	20	16	32.2	95.000	19	326	0	0	95	95	Coregonus sp. 'balchen' genome assembly, chromosome: 4	Coregonus sp. 'balchen'	1	2	21	52059896	52059915
+1	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Cimex lectularius DNA, complete genome	Wolbachia endosymbiont of Cimex lectularius	0	4	21	1053922	1053939
+1	18	18	36.2	100.000	18	21	0	0	86	86	Agrochola macilenta genome assembly, chromosome: 30	Agrochola macilenta	0	3	20	3225916	3225933
+1	17	17	34.2	100.000	17	83	0	0	81	81	Plesiomonas shigelloides strain FDAARGOS_725 chromosome	Plesiomonas shigelloides	0	1	17	2893642	2893658
+1	17	17	34.2	100.000	17	83	0	0	81	81	Vibrio sp. HDW18 chromosome, complete genome	Vibrio sp. HDW18	0	4	20	326786	326802
+1	17	17	34.2	100.000	17	83	0	0	81	81	Caligus rogercresseyi isolate FCH chromosome 8	Caligus rogercresseyi	0	1	17	22354126	22354110
+1	17	17	34.2	100.000	17	83	0	0	81	81	Thermococcus indicus strain IOH1 chromosome, complete genome	Thermococcus indicus	0	3	19	1750563	1750547
+1	17	17	34.2	100.000	17	83	0	0	81	81	Pseudoalteromonas sp. R3 chromosome 1, complete sequence	Pseudoalteromonas sp. R3	0	2	18	1278770	1278786
+1	21	17	34.2	95.238	20	83	0	0	100	100	Wolbachia endosymbiont of Bemisia tabaci strain Kolkata aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Bemisia tabaci	1	1	21	1	21
+2	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKF2 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+2	19	19	38.2	100.000	19	5.3	0	0	90	90	Sparus aurata genome assembly, chromosome: 21	Sparus aurata	0	3	21	19103359	19103377
+2	19	19	38.2	100.000	19	5.3	0	0	90	90	Takifugu rubripes genome assembly, chromosome: 12	Takifugu rubripes	0	3	21	8678977	8678995
+2	19	19	38.2	100.000	19	5.3	0	0	90	90	Acanthopagrus latus isolate v.2019 genome assembly, chromosome: 21	Acanthopagrus latus	0	3	21	15521736	15521754
+2	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain AKB48 chromosome, complete genome	Enterobacter hormaechei	0	4	21	2521738	2521721
+2	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain AMS-38 chromosome, complete genome	Enterobacter hormaechei	0	4	21	1518836	1518819
+2	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter sp. LU1 chromosome, complete genome	Enterobacter sp. LU1	0	4	21	4080148	4080131
+2	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain Y2152 chromosome, complete genome	Enterobacter hormaechei	0	4	21	2315179	2315162
+2	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain Y323 chromosome, complete genome	Enterobacter hormaechei	0	4	21	3259557	3259574
+2	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain Y233 chromosome, complete genome	Enterobacter hormaechei	0	4	21	4241343	4241360
+3	19	19	38.2	100.000	19	5.3	0	0	90	90	Rhodopseudomonas palustris TIE-1 chromosome, complete genome	Rhodopseudomonas palustris TIE-1	0	3	21	2078730	2078712
+3	18	18	36.2	100.000	18	21	0	0	86	86	Aquila chrysaetos chrysaetos genome assembly, chromosome: 20	Aquila chrysaetos chrysaetos	0	2	19	23501468	23501451
+3	18	18	36.2	100.000	18	21	0	0	86	86	Salmo trutta genome assembly, chromosome: 1	Salmo trutta	0	3	20	13447738	13447721
+3	18	18	36.2	100.000	18	21	0	0	86	86	Lateolabrax maculatus linkage group 4 genomic sequence	Lateolabrax maculatus	0	2	19	18902215	18902198
+3	18	18	36.2	100.000	18	21	0	0	86	86	Bacillus sp. F19 chromosome, complete genome	Bacillus sp. F19	0	1	18	2945718	2945701
+3	18	18	36.2	100.000	18	21	0	0	86	86	Accipiter gentilis genome assembly, chromosome: 23	Accipiter gentilis	0	2	19	23560013	23559996
+3	18	18	36.2	100.000	18	21	0	0	86	86	Omphaloscelis lunosa genome assembly, chromosome: 19	Omphaloscelis lunosa	0	3	20	257559	257576
+3	18	18	36.2	100.000	18	21	0	0	86	86	Pseudomonas sp. LAB-08 DNA, complete genome	N/A	0	1	18	3848794	3848811
+3	18	18	36.2	100.000	18	21	0	0	86	86	Hedya salicella genome assembly, chromosome: 14	Hedya salicella	0	4	21	4809966	4809983
+3	18	18	36.2	100.000	18	21	0	0	86	86	Biston betularia genome assembly, chromosome: 2	Biston betularia	0	4	21	11444943	11444926
+4	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Bemisia tabaci strain Kolkata aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Bemisia tabaci	0	1	21	1	21
+4	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Brontispa longissima strain wLogP aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Brontispa longissima	0	4	21	1	18
+4	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Brontispa longissima strain wLogE aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Brontispa longissima	0	4	21	1	18
+4	18	18	36.2	100.000	18	21	0	0	86	86	Vigna angularis var. angularis DNA, chromosome 5, almost complete sequence, cultivar: Shumari	Vigna angularis var. angularis	0	4	21	1908577	1908560
+4	18	18	36.2	100.000	18	21	0	0	86	86	PREDICTED: Vollenhovia emeryi glutamyl-tRNA(Gln) amidotransferase subunit B, mitochondrial-like (LOC105558472), mRNA	Vollenhovia emeryi	0	4	21	424	441
+4	18	18	36.2	100.000	18	21	0	0	86	86	Aricia agestis genome assembly, chromosome: 1	Aricia agestis	0	4	21	22399365	22399382
+4	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Oedothorax gibbosus strain wOegibbosus-W744x776B genome assembly, chromosome: 1	Wolbachia endosymbiont of Oedothorax gibbosus	0	4	21	455230	455213
+4	18	18	36.2	100.000	18	21	0	0	86	86	Gibbula magus genome assembly, chromosome: 11	Gibbula magus	0	1	18	11117161	11117178
+4	18	18	36.2	100.000	18	21	0	0	86	86	Aricia artaxerxes genome assembly, chromosome: 1	Aricia artaxerxes	0	4	21	6575230	6575213
+4	18	18	36.2	100.000	18	21	0	0	86	86	Nephrotoma flavescens genome assembly, chromosome: X	Nephrotoma flavescens	0	4	21	8598432	8598415
+5	19	19	38.2	100.000	19	5.3	0	0	90	90	Buathra laborator genome assembly, chromosome: 3	Buathra laborator	0	1	19	17007645	17007627
+5	19	19	38.2	100.000	19	5.3	0	0	90	90	Acleris sparsana genome assembly, chromosome: 4	Acleris sparsana	0	2	20	10571607	10571589
+5	18	18	36.2	100.000	18	21	0	0	86	86	PREDICTED: Gossypium raimondii clathrin interactor EPSIN 2-like (LOC105795573), mRNA	Gossypium raimondii	0	1	18	653	636
+5	18	18	36.2	100.000	18	21	0	0	86	86	Acleris emargana genome assembly, chromosome: 1	Acleris emargana	0	4	21	3447618	3447601
+5	18	18	36.2	100.000	18	21	0	0	86	86	Haliclystus octoradiatus genome assembly, chromosome: 4	Haliclystus octoradiatus	0	3	20	25785808	25785791
+5	18	18	36.2	100.000	18	21	0	0	86	86	PREDICTED: Gossypium hirsutum nucleoporin AMO1-like (LOC107941962), mRNA	Gossypium hirsutum	0	1	18	575	558
+5	18	18	36.2	100.000	18	21	0	0	86	86	Eubacterium rectale M104/1 draft genome	[Eubacterium] rectale M104/1	0	4	21	2306174	2306157
+5	18	18	36.2	100.000	18	21	0	0	86	86	Gossypium raimondii isolate D5-4 chromosome D5_03	Gossypium raimondii	0	1	18	61580751	61580768
+5	18	18	36.2	100.000	18	21	0	0	86	86	[Eubacterium] rectale strain VPI 0990 chromosome, complete genome	[Eubacterium] rectale	0	4	21	677460	677477
+5	18	18	36.2	100.000	18	21	0	0	86	86	Klebsiella michiganensis strain CCRI-24235 chromosome, complete genome	Klebsiella michiganensis	0	1	18	1632976	1632993
+6	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone SKF2 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+6	19	19	38.2	100.000	19	5.3	0	0	90	90	Pyrgus malvae genome assembly, chromosome: 9	Pyrgus malvae	0	2	20	12530214	12530196
+6	19	19	38.2	100.000	19	5.3	0	0	90	90	Phalera bucephala genome assembly, chromosome: 19	Phalera bucephala	0	3	21	19757709	19757691
+6	18	18	36.2	100.000	18	21	0	0	86	86	Proteobacteria bacterium isolate PRO20 chromosome	Pseudomonadota bacterium	0	4	21	359051	359034
+6	18	18	36.2	100.000	18	21	0	0	86	86	PREDICTED: Vollenhovia emeryi forkhead box protein O (LOC105568396), transcript variant X1, mRNA	Vollenhovia emeryi	0	4	21	3375	3392
+6	18	18	36.2	100.000	18	21	0	0	86	86	Bibersteinia trehalosi USDA-ARS-USMARC-190, complete genome	Bibersteinia trehalosi USDA-ARS-USMARC-190	0	4	21	1420469	1420486
+6	18	18	36.2	100.000	18	21	0	0	86	86	Bibersteinia trehalosi USDA-ARS-USMARC-189, complete genome	Bibersteinia trehalosi USDA-ARS-USMARC-189	0	4	21	1058425	1058408
+6	18	18	36.2	100.000	18	21	0	0	86	86	Bibersteinia trehalosi USDA-ARS-USMARC-188, complete genome	Bibersteinia trehalosi USDA-ARS-USMARC-188	0	4	21	977883	977866
+6	18	18	36.2	100.000	18	21	0	0	86	86	Bibersteinia trehalosi USDA-ARS-USMARC-192, complete genome	Bibersteinia trehalosi USDA-ARS-USMARC-192	0	4	21	1394623	1394640
+6	18	18	36.2	100.000	18	21	0	0	95	86	Lepeophtheirus salmonis strain IoA-00 genome assembly, chromosome: 2	Lepeophtheirus salmonis	0	4	21	25150305	25150288
+6	20	16	32.2	95.000	19	326	0	0	95	95	Lepeophtheirus salmonis strain IoA-00 genome assembly, chromosome: 2	Lepeophtheirus salmonis	1	2	21	22141231	22141212
+7	21	21	42.1	100.000	21	0.34	0	0	100	100	Uncultured Wolbachia sp. clone Cameroon glutamyl-tRNA(Gln) amidotransferase subunit B (gatB) gene, partial cds	uncultured Wolbachia sp.	0	1	21	471	451
+7	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKM1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+7	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKF1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+7	18	18	36.2	100.000	18	21	0	0	86	86	Allobaculum mucolyticum strain 128 chromosome, complete genome	Allobaculum mucilyticum	0	1	18	403781	403764
+7	18	18	36.2	100.000	18	21	0	0	86	86	Chthonomonas calidirosea T49 complete genome	Chthonomonas calidirosea T49	0	2	19	1322030	1322047
+7	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKM4 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	4	21	4	21
+7	17	17	34.2	100.000	17	83	0	0	81	81	Edwardsiella piscicida strain CK41 chromosome, complete genome	Edwardsiella piscicida	0	2	18	1615368	1615384
+7	17	17	34.2	100.000	17	83	0	0	81	81	Pseudomonas sp. DG56-2 chromosome, complete genome	Pseudomonas sp. DG56-2	0	2	18	70398	70382
+7	17	17	34.2	100.000	17	83	0	0	81	81	Pseudomonas sp. R11-23-07 chromosome, complete genome	Pseudomonas sp. R11-23-07	0	3	19	675428	675444
+7	17	17	34.2	100.000	17	83	0	0	81	81	Pseudomonas sp. R4-34-07 chromosome, complete genome	Pseudomonas sp. R4-34-07	0	3	19	636336	636352
+8	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone SKM2 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+8	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone UDM1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+8	19	19	38.2	100.000	19	5.3	0	0	90	90	Bembecia ichneumoniformis genome assembly, chromosome: 22	Bembecia ichneumoniformis	0	2	20	8153760	8153778
+8	18	18	36.2	100.000	18	21	0	0	86	86	Proteus vulgaris strain HH17 chromosome, complete genome	Proteus vulgaris	0	4	21	3423625	3423608
+8	18	18	36.2	100.000	18	21	0	0	86	86	Paracoccus kondratievae strain BJQ0001 chromosome 2, complete sequence	Paracoccus kondratievae	0	4	21	453509	453492
+8	18	18	36.2	100.000	18	21	0	0	86	86	Stenoptilia bipunctidactyla genome assembly, chromosome: 25	Stenoptilia bipunctidactyla	0	2	19	1880264	1880247
+8	18	18	36.2	100.000	18	21	0	0	86	86	Proteus vulgaris strain Ld01 chromosome, complete genome	Proteus vulgaris	0	4	21	322105	322088
+8	18	18	36.2	100.000	18	21	0	0	86	86	Proteus sp. NMG38-2 chromosome, complete genome	Proteus sp. NMG38-2	0	4	21	327975	327958
+8	18	18	36.2	100.000	18	21	0	0	86	86	Proteus vulgaris strain CCU063 chromosome, complete genome	Proteus vulgaris	0	4	21	321663	321646
+8	18	18	36.2	100.000	18	21	0	0	86	86	Proteus sp. GOKU chromosome, complete genome	Proteus sp. GOKU	0	4	21	321663	321646
+9	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone UDF2 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+9	18	18	36.2	100.000	18	21	0	0	86	86	Nebria salina genome assembly, chromosome: 2	Nebria salina	0	4	21	5828327	5828310
+9	18	18	36.2	100.000	18	21	0	0	86	86	Tholera decimalis genome assembly, chromosome: 15	Tholera decimalis	0	4	21	2275095	2275078
+9	16	16	32.2	100.000	16	326	0	0	86	76	Tholera decimalis genome assembly, chromosome: 15	Tholera decimalis	0	6	21	35714569	35714554
+9	16	16	32.2	100.000	16	326	0	0	86	76	Tholera decimalis genome assembly, chromosome: 15	Tholera decimalis	0	6	21	41461260	41461275
+9	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia pipientis strain wAnM chromosome, complete genome	Wolbachia pipientis	0	4	21	206893	206876
+9	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Drosophila simulans strain wMa isolate KB154 chromosome	Wolbachia endosymbiont of Drosophila simulans	0	4	21	36308	36291
+9	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Drosophila simulans wNo, complete genome	Wolbachia endosymbiont of Drosophila simulans wNo	0	4	21	36294	36277
+9	18	18	36.2	100.000	18	21	0	0	86	86	Mythimna impura genome assembly, chromosome: 16	Mythimna impura	0	4	21	1579695	1579678
+9	18	18	36.2	100.000	18	21	0	0	86	86	Mythimna impura genome assembly, chromosome: 13	Mythimna impura	0	4	21	4590808	4590791
+9	18	18	36.2	100.000	18	21	0	0	86	86	Mythimna impura genome assembly, chromosome: 4	Mythimna impura	0	4	21	23933352	23933335
+9	18	18	36.2	100.000	18	21	0	0	86	86	Mythimna impura genome assembly, chromosome: 4	Mythimna impura	0	4	21	24005362	24005379
+9	18	18	36.2	100.000	18	21	0	0	86	86	Mythimna impura genome assembly, chromosome: 1	Mythimna impura	0	4	21	13367371	13367354
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Bemisia tabaci glutamyl-tRNA(Gln) amidotransferase subunit B gene, partial cds	Wolbachia endosymbiont of Bemisia tabaci	0	1	21	2	22
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Bemisia tabaci strain Coimbatore aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Bemisia tabaci	0	1	21	1	21
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Bemisia tabaci strain Amravati aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Bemisia tabaci	0	1	21	1	21
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Wiebesia pumilae isolate MIAOwWpum chromosome, complete genome	Wolbachia endosymbiont of Wiebesia pumilae	0	1	21	516593	516573
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Wiebesia pumilae isolate MIAOwWpum chromosome, complete genome	Wolbachia endosymbiont of Wiebesia pumilae	0	1	21	716380	716400
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Wiebesia pumilae isolate MIAOwWpum chromosome, complete genome	Wolbachia endosymbiont of Wiebesia pumilae	0	1	21	917757	917737
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone UDM2 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+10	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Ceutorhynchus obstrictus clone 291 glutamyl-tRNA amidotransferase subunit B (gatB) gene, gatB-32 allele, partial cds	Wolbachia endosymbiont of Ceutorhynchus obstrictus	0	1	21	2	22
+10	20	20	40.1	100.000	20	1.3	0	0	95	95	Wolbachia pipientis isolate Aobliqua-141 aspartyl/glutamyl-tRNA amidotransferase subunit B gene, partial cds	Wolbachia pipientis	0	2	21	1	20
+10	19	19	38.2	100.000	19	5.3	0	0	90	90	Nibea albiflora genome assembly, chromosome: 18	Nibea albiflora	0	3	21	7318404	7318422
+10	18	18	36.2	100.000	18	21	0	0	86	86	Danio rerio genome assembly, chromosome: 24	Danio rerio	0	1	18	39083412	39083395
+10	18	18	36.2	100.000	18	21	0	0	86	86	PREDICTED: Crassostrea gigas uncharacterized LOC117680359 (LOC117680359), mRNA	Crassostrea gigas	0	2	19	1458	1441
+11	21	21	42.1	100.000	21	0.34	0	0	100	100	Laodelphax striatella isolate wStri GatB (gatB) gene, partial cds	Laodelphax striatellus	0	1	21	1	21
+11	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone SKM3 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+11	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone SKF1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+11	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone UDF1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+11	19	19	38.2	100.000	19	5.3	0	0	90	90	Cyprinus carpio genome assembly common carp genome, scaffold: LG47, chromosome: 47	Cyprinus carpio	0	2	20	14371829	14371811
+11	17	17	34.2	100.000	17	83	0	0	90	81	Cyprinus carpio genome assembly common carp genome, scaffold: LG47, chromosome: 47	Cyprinus carpio	0	2	18	4264047	4264063
+11	17	17	34.2	100.000	17	83	0	0	90	81	Cyprinus carpio genome assembly common carp genome, scaffold: LG47, chromosome: 47	Cyprinus carpio	0	2	18	12475970	12475954
+11	17	17	34.2	100.000	17	83	0	0	90	81	Cyprinus carpio genome assembly common carp genome, scaffold: LG47, chromosome: 47	Cyprinus carpio	0	2	18	14389544	14389528
+11	18	18	36.2	100.000	18	21	0	0	86	86	Proteus terrae subsp. cibarius strain HNCF44W chromosome, complete genome	Proteus terrae subsp. cibarius	0	4	21	1576376	1576393
+11	18	18	36.2	100.000	18	21	0	0	86	86	Proteus terrae subsp. cibarius strain HNCF43W chromosome, complete genome	Proteus terrae subsp. cibarius	0	4	21	3552076	3552093
+11	18	18	36.2	100.000	18	21	0	0	86	86	Proteus terrae subsp. cibarius strain G32 chromosome, complete genome	Proteus terrae subsp. cibarius	0	4	21	343555	343538
+11	18	18	36.2	100.000	18	21	0	0	86	86	Proteus terrae subsp. cibarius strain ZN2 chromosome, complete genome	Proteus terrae subsp. cibarius	0	4	21	314196	314179
+11	18	18	36.2	100.000	18	21	0	0	86	86	Proteus terrae subsp. cibarius strain ZF1 chromosome, complete genome	Proteus terrae subsp. cibarius	0	4	21	3184579	3184596
+12	19	19	38.2	100.000	19	5.3	0	0	90	90	Heterocephalus glaber genome assembly, chromosome: 27	Heterocephalus glaber	0	1	19	100050	100068
+12	19	19	38.2	100.000	19	5.3	0	0	90	90	Parapoynx stratiotata genome assembly, chromosome: Z	Parapoynx stratiotata	0	2	20	14126524	14126506
+12	18	18	36.2	100.000	18	21	0	0	86	86	Helicobacter suis NHP19-4022 DNA, complete genome	Helicobacter suis	0	1	18	1206354	1206337
+12	18	18	36.2	100.000	18	21	0	0	86	86	Helicobacter suis NHP19-4004 DNA, complete genome	Helicobacter suis	0	1	18	953905	953888
+12	18	18	36.2	100.000	18	21	0	0	86	86	Helicobacter suis NHP19-4003 DNA, complete genome	Helicobacter suis	0	1	18	960281	960264
+12	18	18	36.2	100.000	18	21	0	0	86	86	Helicobacter suis NHP19-0020 DNA, complete genome	Helicobacter suis	0	1	18	1289620	1289637
+12	18	18	36.2	100.000	18	21	0	0	86	86	Helicobacter suis SNTW101c DNA, complete genome	Helicobacter suis	0	1	18	1249412	1249429
+12	18	18	36.2	100.000	18	21	0	0	86	86	Branchiostoma lanceolatum genome assembly, chromosome: 9	Branchiostoma lanceolatum	0	4	21	22160616	22160599
+12	18	18	36.2	100.000	18	21	0	0	86	86	Philereme vetulata genome assembly, chromosome: 28	Philereme vetulata	0	3	20	4284191	4284208
+12	18	18	36.2	100.000	18	21	0	0	86	86	MAG TPA_asm: Siphoviridae sp. isolate ctGgn4	Siphoviridae sp.	0	3	20	14222	14205
+13	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Cimex lectularius DNA, complete genome	Wolbachia endosymbiont of Cimex lectularius	0	1	21	1053919	1053939
+13	19	19	38.2	100.000	19	5.3	0	0	90	90	Coregonus sp. 'balchen' genome assembly, chromosome: 8	Coregonus sp. 'balchen'	0	3	21	39921861	39921879
+13	19	19	38.2	100.000	19	5.3	0	0	90	90	Coregonus sp. 'balchen' genome assembly, chromosome: 4	Coregonus sp. 'balchen'	0	3	21	52041050	52041068
+13	18	18	36.2	100.000	18	21	0	0	86	86	Vibrio sp. HDW18 chromosome, complete genome	Vibrio sp. HDW18	0	3	20	326785	326802
+13	18	18	36.2	100.000	18	21	0	0	86	86	Anopheles coluzzii genome assembly, chromosome: 3	Anopheles coluzzii	0	2	19	94071029	94071012
+13	18	18	36.2	100.000	18	21	0	0	86	86	Poecilia reticulata genome assembly, chromosome: 10	Poecilia reticulata	0	2	19	21138137	21138154
+13	18	18	36.2	100.000	18	21	0	0	86	86	Thermincola potens JR chromosome, complete genome	Thermincola potens JR	0	1	18	1111288	1111271
+13	17	17	34.2	100.000	17	83	0	0	81	81	Helicobacter suis NHP19-4022 DNA, complete genome	Helicobacter suis	0	1	17	1206354	1206338
+13	17	17	34.2	100.000	17	83	0	0	81	81	Helicobacter suis NHP19-4004 DNA, complete genome	Helicobacter suis	0	1	17	953905	953889
+13	17	17	34.2	100.000	17	83	0	0	81	81	Helicobacter suis NHP19-4003 DNA, complete genome	Helicobacter suis	0	1	17	960281	960265
+14	20	20	40.1	100.000	20	1.3	0	0	95	95	Apamea monoglypha genome assembly, chromosome: Z	Apamea monoglypha	0	2	21	2391095	2391076
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain AKB48 chromosome, complete genome	Enterobacter hormaechei	0	4	21	2521738	2521721
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain AMS-38 chromosome, complete genome	Enterobacter hormaechei	0	4	21	1518836	1518819
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter sp. LU1 chromosome, complete genome	Enterobacter sp. LU1	0	4	21	4080148	4080131
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain Y2152 chromosome, complete genome	Enterobacter hormaechei	0	4	21	2315179	2315162
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain BW chromosome, complete genome	Enterobacter hormaechei	0	4	21	4413861	4413844
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain BW chromosome, complete genome	Enterobacter hormaechei	0	4	21	4288294	4288277
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain C45 chromosome, complete genome	Enterobacter hormaechei	0	4	21	4527019	4527002
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain EB_P9_L5_03.19 chromosome, complete genome	Enterobacter hormaechei	0	4	21	1374244	1374227
+14	18	18	36.2	100.000	18	21	0	0	86	86	Enterobacter hormaechei strain C44 chromosome, complete genome	Enterobacter hormaechei	0	4	21	4174716	4174699
+15	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone UDM3 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Hafnia alvei strain A23BA chromosome, complete genome	Hafnia alvei	0	2	20	3034017	3033999
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Hafnia alvei strain A23BA chromosome, complete genome	Hafnia alvei	0	2	20	3034113	3034095
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Hafnia alvei strain A23BA chromosome, complete genome	Hafnia alvei	0	2	20	3830946	3830928
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Mannheimia granulomatis strain B 234/94 chromosome, complete genome	Mannheimia granulomatis	0	2	20	1919497	1919479
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Hafnia sp. CBA7124 DNA, complete genome	Hafnia sp. CBA7124	0	2	20	2941622	2941604
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Hafnia sp. CBA7124 DNA, complete genome	Hafnia sp. CBA7124	0	2	20	2941718	2941700
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Hafnia alvei strain HUMV-5920, complete genome	Hafnia alvei	0	2	20	2308276	2308294
+15	19	19	38.2	100.000	19	5.3	0	0	90	90	Hedya salicella genome assembly, chromosome: 14	Hedya salicella	0	3	21	4809965	4809983
+15	18	18	36.2	100.000	18	21	0	0	86	86	Acinetobacter indicus strain TQ04 chromosome, complete genome	Acinetobacter indicus	0	1	18	801529	801512
+15	18	18	36.2	100.000	18	21	0	0	86	86	PREDICTED: Myripristis murdjan protein canopy homolog 2-like (LOC115358858), transcript variant X2, mRNA	Myripristis murdjan	0	1	18	2479	2462
+15	18	18	36.2	100.000	18	21	0	0	86	86	PREDICTED: Myripristis murdjan protein canopy homolog 2-like (LOC115358858), transcript variant X1, mRNA	Myripristis murdjan	0	1	18	2453	2436
+15	18	18	36.2	100.000	18	21	0	0	86	86	Myripristis murdjan genome assembly, chromosome: 5	Myripristis murdjan	0	1	18	21514831	21514814
+16	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Oedothorax gibbosus strain wOegibbosus-W744x776B genome assembly, chromosome: 1	Wolbachia endosymbiont of Oedothorax gibbosus	0	1	21	455233	455213
+16	21	21	42.1	100.000	21	0.34	0	0	100	100	PREDICTED: Vollenhovia emeryi glutamyl-tRNA(Gln) amidotransferase subunit B, mitochondrial-like (LOC105558472), mRNA	Vollenhovia emeryi	0	1	21	421	441
+16	20	20	40.1	100.000	20	1.3	0	0	95	95	Pedobacter sp. SW-16 chromosome, complete genome	Pedobacter riviphilus	0	1	20	2341657	2341638
+16	19	19	38.2	100.000	19	5.3	0	0	90	90	PREDICTED: Choloepus didactylus HECT, C2 and WW domain containing E3 ubiquitin protein ligase 2 (HECW2), transcript variant X5, mRNA	Choloepus didactylus	0	1	19	7806	7824
+16	19	19	38.2	100.000	19	5.3	0	0	90	90	PREDICTED: Choloepus didactylus HECT, C2 and WW domain containing E3 ubiquitin protein ligase 2 (HECW2), transcript variant X4, mRNA	Choloepus didactylus	0	1	19	7944	7962
+16	19	19	38.2	100.000	19	5.3	0	0	90	90	PREDICTED: Choloepus didactylus HECT, C2 and WW domain containing E3 ubiquitin protein ligase 2 (HECW2), transcript variant X3, mRNA	Choloepus didactylus	0	1	19	7980	7998
+16	19	19	38.2	100.000	19	5.3	0	0	90	90	PREDICTED: Choloepus didactylus HECT, C2 and WW domain containing E3 ubiquitin protein ligase 2 (HECW2), transcript variant X2, mRNA	Choloepus didactylus	0	1	19	7840	7858
+16	19	19	38.2	100.000	19	5.3	0	0	90	90	PREDICTED: Choloepus didactylus HECT, C2 and WW domain containing E3 ubiquitin protein ligase 2 (HECW2), transcript variant X1, mRNA	Choloepus didactylus	0	1	19	8046	8064
+16	18	18	36.2	100.000	18	21	0	0	86	86	Capnocytophaga endodontalis strain ChDC OS43 chromosome, complete genome	Capnocytophaga endodontalis	0	3	20	2928328	2928311
+16	18	18	36.2	100.000	18	21	0	0	86	86	Vigna angularis var. angularis DNA, chromosome 5, almost complete sequence, cultivar: Shumari	Vigna angularis var. angularis	0	4	21	1908577	1908560
+17	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone SKM1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+17	20	20	40.1	100.000	20	1.3	0	0	95	95	Sphingobacteriaceae bacterium GW460-11-11-14-LB5, complete genome	Sphingobacteriaceae bacterium GW460-11-11-14-LB5	0	1	20	2285878	2285897
+17	19	19	38.2	100.000	19	5.3	0	0	90	90	[Eubacterium] rectale strain VPI 0990 chromosome, complete genome	[Eubacterium] rectale	0	3	21	677459	677477
+17	19	19	38.2	100.000	19	5.3	0	0	90	90	Eubacterium rectale DSM 17629 draft genome	[Eubacterium] rectale DSM 17629	0	3	21	371928	371946
+17	19	19	38.2	100.000	19	5.3	0	0	90	90	Lachnospiraceae bacterium isolate MGYG-HGUT-02492 genome assembly, chromosome: 1	[Eubacterium] rectale ATCC 33656;Lachnospiraceae bacterium	0	3	21	677460	677478
+17	19	19	38.2	100.000	19	5.3	0	0	90	90	Solea senegalensis genome assembly, chromosome: L	Solea senegalensis	0	2	20	25555915	25555897
+17	19	19	38.2	100.000	19	5.3	0	0	90	90	Acleris emargana genome assembly, chromosome: 1	Acleris emargana	0	3	21	3447619	3447601
+17	19	19	38.2	100.000	19	5.3	0	0	90	90	Eubacterium rectale M104/1 draft genome	[Eubacterium] rectale M104/1	0	3	21	2306175	2306157
+17	18	18	36.2	100.000	18	21	0	0	86	86	Sciurus vulgaris genome assembly, chromosome: 14	Sciurus vulgaris	0	3	20	91909950	91909967
+17	18	18	36.2	100.000	18	21	0	0	86	86	Chanos chanos genome assembly, chromosome: 14	Chanos chanos	0	1	18	15741845	15741862
+18	20	20	40.1	100.000	20	1.3	0	0	95	95	Proteobacteria bacterium isolate PRO20 chromosome	Pseudomonadota bacterium	0	2	21	359053	359034
+18	19	19	38.2	100.000	19	5.3	0	0	90	90	Endotricha flammealis genome assembly, chromosome: 4	Endotricha flammealis	0	3	21	4188610	4188592
+18	19	19	38.2	100.000	19	5.3	0	0	90	90	PREDICTED: Petromyzon marinus sacsin molecular chaperone (SACS), mRNA	Petromyzon marinus	0	2	20	2216	2234
+18	19	19	38.2	100.000	19	5.3	0	0	95	90	Agriotes lineatus genome assembly, chromosome: 10	Agriotes lineatus	0	2	20	43720422	43720440
+18	18	18	36.2	100.000	18	21	0	0	95	86	Agriotes lineatus genome assembly, chromosome: 10	Agriotes lineatus	0	2	19	46879402	46879385
+18	16	16	32.2	100.000	16	326	0	0	95	76	Agriotes lineatus genome assembly, chromosome: 10	Agriotes lineatus	0	1	16	28735034	28735019
+18	16	16	32.2	100.000	16	326	0	0	95	76	Agriotes lineatus genome assembly, chromosome: 10	Agriotes lineatus	0	2	17	18063930	18063945
+18	16	16	32.2	100.000	16	326	0	0	95	76	Agriotes lineatus genome assembly, chromosome: 10	Agriotes lineatus	0	1	16	28975457	28975472
+18	16	16	32.2	100.000	16	326	0	0	95	76	Agriotes lineatus genome assembly, chromosome: 10	Agriotes lineatus	0	5	20	47993855	47993870
+18	18	18	36.2	100.000	18	21	0	0	86	86	Bibersteinia trehalosi USDA-ARS-USMARC-189, complete genome	Bibersteinia trehalosi USDA-ARS-USMARC-189	0	4	21	1058425	1058408
+18	18	18	36.2	100.000	18	21	0	0	86	86	Bibersteinia trehalosi USDA-ARS-USMARC-188, complete genome	Bibersteinia trehalosi USDA-ARS-USMARC-188	0	4	21	977883	977866
+18	18	18	36.2	100.000	18	21	0	0	86	86	Polynucleobacter sp. JS-JIR-5-A7 chromosome	Polynucleobacter sp. JS-JIR-5-A7	0	1	18	2089333	2089316
+18	18	18	36.2	100.000	18	21	0	0	86	86	Hecatera dysodea genome assembly, chromosome: 25	Hecatera dysodea	0	2	19	5569884	5569867
+18	18	18	36.2	100.000	18	21	0	0	86	86	Lepeophtheirus salmonis strain IoA-00 genome assembly, chromosome: 2	Lepeophtheirus salmonis	0	4	21	25150305	25150288
+18	18	18	36.2	100.000	18	21	0	0	86	86	Lepeophtheirus salmonis strain IoA-00 genome assembly, chromosome: 2	Lepeophtheirus salmonis	0	4	21	25150305	25150288
+19	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKM4 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+19	18	18	36.2	100.000	18	21	0	0	86	86	Uncultured Wolbachia sp. clone Cameroon glutamyl-tRNA(Gln) amidotransferase subunit B (gatB) gene, partial cds	uncultured Wolbachia sp.	0	4	21	468	451
+19	18	18	36.2	100.000	18	21	0	0	86	86	Aspergillus aculeatus ATCC 16872 uncharacterized protein (ASPACDRAFT_39208), partial mRNA	Aspergillus aculeatus ATCC 16872	0	2	19	213	196
+19	18	18	36.2	100.000	18	21	0	0	86	86	Limnephilus lunatus genome assembly, chromosome: 10	Limnephilus lunatus	0	3	20	34106200	34106183
+19	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKM1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	4	21	4	21
+19	18	18	36.2	100.000	18	21	0	0	86	86	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKF1 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	4	21	4	21
+19	21	17	34.2	95.238	20	83	0	0	100	100	Wolbachia endosymbiont of Ctenocephalides felis wCfeJ chromosome, complete genome	Wolbachia endosymbiont of Ctenocephalides felis wCfeJ	1	1	21	25880	25860
+19	21	17	34.2	95.238	20	83	0	0	100	100	Wolbachia endosymbiont of Brugia pahangi isolate FR3 chromosome, complete genome	Wolbachia endosymbiont of Brugia pahangi	1	1	21	830434	830414
+19	17	17	34.2	100.000	17	83	0	0	81	81	Kingella kingae strain ATCC 23331 chromosome, complete genome	Kingella kingae	0	1	17	1580991	1580975
+19	17	17	34.2	100.000	17	83	0	0	81	81	Sulfurimonas xiamenensis strain 1-1N chromosome, complete genome	Sulfurimonas xiamenensis	0	1	17	1235189	1235173
+20	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKM2 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+20	20	20	40.1	100.000	20	1.3	0	0	95	95	Proteus vulgaris strain HH17 chromosome, complete genome	Proteus vulgaris	0	2	21	3423627	3423608
+20	19	19	38.2	100.000	19	5.3	0	0	90	90	Proteus vulgaris strain Ld01 chromosome, complete genome	Proteus vulgaris	0	3	21	322106	322088
+20	19	19	38.2	100.000	19	5.3	0	0	90	90	Proteus sp. NMG38-2 chromosome, complete genome	Proteus sp. NMG38-2	0	3	21	327976	327958
+20	19	19	38.2	100.000	19	5.3	0	0	90	90	Proteus vulgaris strain CCU063 chromosome, complete genome	Proteus vulgaris	0	3	21	321664	321646
+20	19	19	38.2	100.000	19	5.3	0	0	90	90	Proteus sp. GOKU chromosome, complete genome	Proteus sp. GOKU	0	3	21	321664	321646
+20	18	18	36.2	100.000	18	21	0	0	86	86	Cronobacter sakazakii strain CFSAN068773 chromosome, complete genome	Cronobacter sakazakii	0	2	19	4168658	4168675
+20	18	18	36.2	100.000	18	21	0	0	86	86	Cronobacter sakazakii strain CS-09 chromosome, complete genome	Cronobacter sakazakii	0	2	19	1412445	1412462
+20	18	18	36.2	100.000	18	21	0	0	86	86	Cupriavidus malaysiensis strain USMAA1020 isolate pure chromosome 2, complete sequence	Cupriavidus malaysiensis	0	1	18	2109871	2109888
+20	18	18	36.2	100.000	18	21	0	0	86	86	Cupriavidus sp. USMAA2-4 isolate pure chromosome 2, complete sequence	Cupriavidus sp. USMAA2-4	0	1	18	3398811	3398828
+21	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Drosophila mauritiana strain wMau chromosome, complete genome	Wolbachia endosymbiont of Drosophila mauritiana	0	1	21	750994	751014
+21	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Drosophila mauritiana strain wMau chromosome, complete genome	Wolbachia endosymbiont of Drosophila mauritiana	0	1	21	750993	751013
+21	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone KKF3 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+21	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Yamatotettix flavovittatus clone UDF3 aspartyl/glutamyl-tRNA amidotransferase subunit B (gatB) gene, partial cds	Wolbachia endosymbiont of Yamatotettix flavovittatus	0	1	21	1	21
+21	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia pipientis strain wAnM chromosome, complete genome	Wolbachia pipientis	0	1	21	206896	206876
+21	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Drosophila simulans strain wMa isolate KB154 chromosome	Wolbachia endosymbiont of Drosophila simulans	0	1	21	36311	36291
+21	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Drosophila simulans wNo, complete genome	Wolbachia endosymbiont of Drosophila simulans wNo	0	1	21	36297	36277
+21	20	20	40.1	100.000	20	1.3	0	0	95	95	Mythimna impura genome assembly, chromosome: 15	Mythimna impura	0	2	21	17314750	17314769
+21	20	16	32.2	95.000	19	326	0	0	95	95	Mythimna impura genome assembly, chromosome: 15	Mythimna impura	1	2	21	4181772	4181791
+21	20	20	40.1	100.000	20	1.3	0	0	95	95	Mythimna impura genome assembly, chromosome: 14	Mythimna impura	0	2	21	14548335	14548354
+21	20	20	40.1	100.000	20	1.3	0	0	95	95	Mythimna impura genome assembly, chromosome: 4	Mythimna impura	0	2	21	24005360	24005379
+21	20	20	40.1	100.000	20	1.3	0	0	95	95	Mythimna impura genome assembly, chromosome: 4	Mythimna impura	0	2	21	23933354	23933335
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Ctenocephalides felis wCfeJ chromosome, complete genome	Wolbachia endosymbiont of Ctenocephalides felis wCfeJ	0	1	21	25880	25860
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Brugia pahangi isolate FR3 chromosome, complete genome	Wolbachia endosymbiont of Brugia pahangi	0	1	21	830434	830414
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia pipientis strain wIrr chromosome, complete genome	Wolbachia pipientis	0	1	21	491122	491142
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Aedes albopictus isolate 14 aspartate/glutamate tRNA aminotransferase B (gatB) gene, partial cds	Wolbachia endosymbiont of Aedes albopictus	0	1	21	35	55
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Aedes albopictus isolate 11 aspartate/glutamate tRNA aminotransferase B (gatB) gene, partial cds	Wolbachia endosymbiont of Aedes albopictus	0	1	21	27	47
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Aedes albopictus isolate 10 aspartate/glutamate tRNA aminotransferase B (gatB) gene, partial cds	Wolbachia endosymbiont of Aedes albopictus	0	1	21	30	50
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Chrysomya megacephala isolate wMeg chromosome, complete genome	Wolbachia endosymbiont of Chrysomya megacephala	0	1	21	955887	955907
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Drosophila ananassae strain W2.1 chromosome, complete genome	Wolbachia endosymbiont of Drosophila ananassae	0	1	21	106846	106826
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia pipientis strain wMel_ZH26 chromosome, complete genome	Wolbachia pipientis	0	1	21	131974	131994
+22	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia pipientis strain wMel_I23 chromosome, complete genome	Wolbachia pipientis	0	1	21	131912	131932
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Bemisia tabaci strain China 1 genome	Wolbachia endosymbiont of Bemisia tabaci	0	1	21	35142	35122
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Ostrinia scapulalis strain wSca chromosome, complete genome	Wolbachia endosymbiont of Ostrinia scapulalis	0	1	21	650155	650135
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Anopheles demeilloni isolate wAnD chromosome, complete genome	Wolbachia endosymbiont of Anopheles demeilloni	0	1	21	36999	36979
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Corcyra cephalonica isolate SYLI2103 chromosome, complete genome	Wolbachia endosymbiont of Corcyra cephalonica	0	1	21	42274	42254
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Spodoptera picta strain Spic_B chromosome, complete genome	Wolbachia endosymbiont of Spodoptera picta	0	1	21	171509	171489
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Diaphorina citri isolate dawsonii chromosome, complete genome	Wolbachia endosymbiont of Diaphorina citri	0	1	21	1492828	1492808
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Diaphorina citri isolate KPSwDI05P26 chromosome	Wolbachia endosymbiont of Diaphorina citri	0	1	21	1040749	1040729
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Uncultured bacterium ARCTIC04_F_10 genomic sequence	uncultured bacterium ARCTIC04_F_10	0	1	21	16383	16363
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Aedes albopictus isolate 37c aspartate/glutamate tRNA aminotransferase B (gatB) gene, partial cds	Wolbachia endosymbiont of Aedes albopictus	0	1	21	61	81
+23	21	21	42.1	100.000	21	0.34	0	0	100	100	Wolbachia endosymbiont of Aedes albopictus isolate 36b aspartate/glutamate tRNA aminotransferase B (gatB) gene, partial cds	Wolbachia endosymbiont of Aedes albopictus	0	1	21	61	81
