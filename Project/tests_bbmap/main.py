@@ -8,48 +8,65 @@ from statistics import mode
 
 
 def concat_references():
+	
 	sequences = []
-	for path in Path(os.getcwd()).rglob('*.fasta'):
+	references_file_size = 0
+	references_files_count = 0
+	for path in Path('primers_references').rglob('*.fasta'):
+
 		if path.name != "primers.fasta" and path.name != "all_references.fasta":
 			fasta_file = SeqIO.to_dict(SeqIO.parse(path, "fasta"))
 			file_name = path.name.replace('.fasta', '')
-			
 			seq_record = fasta_file[list(fasta_file.keys())[0]]
-			seq_record.id = file_name
-			seq_record.description = file_name
+			seq_record.id = str(path.parent).split('/')[-1] + '_' + file_name
+			seq_record.description = ''
 			sequences.append(seq_record)
 
-	with open("all_references.fasta", "w") as output_handle:
+			references_file_size += (1 + len(str(path.parent).split('/')[-1] + '_' + file_name) + 1 + len(seq_record.seq) + len(seq_record.seq) // 60 + 1) / 1000
+			if references_file_size / 1000 > 1:
+				with open(f"all_references/all_references_{references_files_count}.fasta", "w") as output_handle:
+					SeqIO.write(sequences, output_handle, "fasta")
+
+				references_files_count += 1
+				sequences = []
+				references_file_size = 0
+
+	remaining_filename = 'all_references/all_references.fasta' if references_files_count == 0 else f"all_references/all_references_{references_files_count}.fasta"
+	with open(remaining_filename, "w") as output_handle:
 		SeqIO.write(sequences, output_handle, "fasta")
 
 
 def map2references(primer, primers):
-	primer_code = primer.split('@')[0]
-	primer_seq = primers[primer].seq
+	primer_seq = primers.loc[primers['id'] == primer]['nuc'].iloc[0]
 
-	output_file = os.path.join(os.getcwd(), primer_code, 'alignments.sam')
 
-	# subprocess.run(
-	# 	f'source /home/bioinfo/miniconda3/etc/profile.d/conda.sh && \
-	# 	conda activate bbmap_env && \
-	# 	msa.sh in=all_references.fasta out={output_file} literal={primer_seq} rcomp=t addr=t replicate=t cutoff=0.8 -Xmx30g',
-	# 	shell=True,
-	# 	executable='/bin/bash'
-	# )
+	for pos, references_file in enumerate(os.listdir('all_references')):
+		output_file = os.path.join('alignments', f'{primer}_{pos}.sam')
 
-	alignments_df = pd.read_csv(output_file, sep='\t', skiprows=[0], names=['QNAME', 'FLAG', 'RNAME', 'POS', 'MAPQ', 'CIGAR', 'RNEXT', 'PNEXT', 'TLEN', 'SEQ', 'QUAL', 'Identity'])
+		subprocess.run(
+			f'source /home/bioinfo/miniconda3/etc/profile.d/conda.sh && \
+			conda activate bbmap_env && \
+			msa.sh in=all_references/{references_file} out={output_file} literal={primer_seq} rcomp=t addr=t replicate=t cutoff=0.8 -Xmx30g',
+			shell=True,
+			executable='/bin/bash'
+		)
 
-	csv_output_file = os.path.join(os.getcwd(), primer_code, 'alignments.tsv')
-	alignments_df.to_csv(csv_output_file, sep='\t', index=False)
-	print(alignments_df.loc[alignments_df['RNAME'] != "*"])
+		alignments_df = pd.read_csv(output_file, sep='\t', skiprows=[0], names=['QNAME', 'FLAG', 'RNAME', 'POS', 'MAPQ', 'CIGAR', 'RNEXT', 'PNEXT', 'TLEN', 'SEQ', 'QUAL', 'Identity'])
+
+		csv_output_file = os.path.join('alignments', f'{primer}_{pos}.tsv')
+		alignments_df.to_csv(csv_output_file, sep='\t', index=False)
 
 
 def get_primers_alignment_data(primers_fasta):
 	primers_alignment_data = {}
-	for primer_name in primers_fasta.keys():
-		primer_name = primer_name.split('@')[0]
-		if primer_name not in primers_alignment_data.keys():
-			primers_alignment_data[primer_name] = {'alignments': pd.read_csv(f'{primer_name}/alignments.tsv', sep='\t'), 'references': [file.replace('.fasta', '') for file in os.listdir(primer_name) if ".fasta" in file]}
+	for primer_id in primers_fasta.keys():
+		primer_id = primer_id.split(' ')[0]
+		if primer_id in os.listdir('primers_references'):
+			if primer_id not in primers_alignment_data.keys():
+				primer_alignments = [pd.read_csv(str(alignment), sep='\t') for alignment in Path('alignments').rglob(f'{primer_id}_*.tsv')]
+
+				alignments_df = pd.concat(primer_alignments).reset_index(drop=True)
+				primers_alignment_data[primer_id] = {'alignments': alignments_df, 'references': [file.replace('.fasta', '') for file in os.listdir(f'primers_references/{primer_id}') if ".fasta" in file]}
 
 	return primers_alignment_data
 
@@ -63,6 +80,20 @@ def get_common_organisms(alignments_0_df, alignments_1_df):
 	common_organisms.remove('*')
 
 	return common_organisms
+
+
+
+def check_product_size(alignments_0_df, alignments_1_df, organism):
+	organism_0 = alignments_0_df.loc[alignments_0_df['RNAME'] == organism].reset_index(drop=True)
+	pos_0 = organism_0['POS'][0]
+
+	organism_1 = alignments_1_df.loc[alignments_1_df['RNAME'] == organism].reset_index(drop=True)
+	pos_1 = organism_1['POS'][0]
+
+	if abs(pos_0 - pos_1) >= 200:
+		return True
+	else:
+		return False
 
 
 def get_pair_orientation(alignments_0_df, alignments_1_df, pair, organism):
@@ -79,15 +110,21 @@ def get_pair_orientation(alignments_0_df, alignments_1_df, pair, organism):
 		orientation = (pair[0], pair[1])
 	elif pos_0 > pos_1 and query_0[0:2] != "r_" and query_1[0:2] == "r_":
 		orientation = (pair[0], pair[1])
+	elif pos_0 < pos_1 and query_0[0:2] != 'r_' and query_1[0:2] == 'r_':
+		orientation = (pair[1], pair[0])
 	elif pos_0 > pos_1 and query_0[0:2] != "r_" and query_1[0:2] != "r_":
 		orientation = (pair[1], pair[0])
 	elif pos_0 < pos_1 and query_0[0:2] == "r_" and query_1[0:2] != "r_":
 		orientation = (pair[1], pair[0])
+	elif pos_0 > pos_1 and query_0[0:2] == "r_" and query_1[0:2] != "r_":
+		orientation = (pair[0], pair[1])
 	elif pos_0 < pos_1 and query_0[0:2] == "r_" and query_1[0:2] == "r_":
 		orientation = (pair[0], pair[1])
 	elif pos_0 > pos_1 and query_0[0:2] == "r_" and query_1[0:2] == "r_":
 		orientation = (pair[1], pair[0])
 
+	else:
+		print(pos_0, pos_1, query_0, query_1)
 	return orientation
 
 
@@ -99,12 +136,16 @@ def get_primers_pairs(primers_alignment_data):
 		alignments_0_df = primers_alignment_data[pair[0]]['alignments']
 		alignments_1_df = primers_alignment_data[pair[1]]['alignments']
 		common_organisms = get_common_organisms(alignments_0_df, alignments_1_df)
-		
 		orientations = []
 		if len(common_organisms) >= 10:  # pelo menos metade das referencias são comun entre eles 
 			for organism in common_organisms:
-				orientations.append(get_pair_orientation(alignments_0_df, alignments_1_df, pair, organism))
-					
+				if check_product_size(alignments_0_df, alignments_1_df, organism):
+					pair_orientation = get_pair_orientation(alignments_0_df, alignments_1_df, pair, organism)
+					if pair_orientation is not None:
+						orientations.append(pair_orientation)
+
+
+		if len(orientations) >= 10:
 			accepted_pairs.append(mode(orientations))
 
 	return accepted_pairs
@@ -130,24 +171,38 @@ if __name__ == '__main__':
 
 	# concat_references()
 
-	primers_fasta = SeqIO.to_dict(SeqIO.parse("primers.fasta", "fasta"))
 
-	# for primer in primers_fasta.keys():
-	# 	map2references(primer, primers_fasta)
+	primers_meta = pd.read_csv('primers.csv', sep=';')
+	primers_fasta = SeqIO.to_dict(SeqIO.parse('primers.fasta', "fasta"))
+
+	for primer in primers_meta['id']:
+
+		primer_seq = primers_meta.loc[primers_meta['id'] == primer]['nuc'].iloc[0]
+
+		ambiguous = len(primer_seq) - primer_seq.count('A') - primer_seq.count('C') - primer_seq.count('T') - primer_seq.count('G') 
+		if str(primer) in os.listdir('primers_references') and ambiguous <= 3:
+			# map2references(primer, primers_meta)
+			pass
 
 
 	primers_alignment_data = get_primers_alignment_data(primers_fasta)
 	accepted_pairs = get_primers_pairs(primers_alignment_data)
+	print(accepted_pairs)
+	print(len(accepted_pairs))
 
-	primers_meta = pd.read_csv('primers.csv', sep=';')
-	write_pairs_file(accepted_pairs, primers_meta)
+	print('\n\n\n')
+	# write_pairs_file(accepted_pairs, primers_meta)
 	
 
-	end = time.process_time()
-	total = end - start
+	# end = time.process_time()
+	# total = end - start
 
-	print('Tempo de execução: ', total)
+	# print('Tempo de execução: ', total)
 			
-			
+
 # para corrigir problema com primers que se alinham em mais de uma localidade, posso fazer o alinhamento mais de uma vez, cortando a sequencia onde encontrar alinhamento, e terminar quando nao conseguir alinhar mais
 
+# problema com um primer de nome COI Fish.. problema porque tem esse espaço no nome. Corrigir
+# problema com tamanhos dos arquivos, tão vindo muito grandes, tentar um meio termo. tentar acima de 10000 e ate 50000. os que sao acima de 200 000 ja remover, so aceitar se nao fechar 10 organismos
+# ver qual estrategia é melhor: usar o msa ou criar um banco blast
+# problema no programa que baixa as referencias.. ver oq aconteceu de erro
