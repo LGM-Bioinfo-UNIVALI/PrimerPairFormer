@@ -51,6 +51,8 @@ redo2 = [3709, 2007]
 # df_references_nt = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs_redo_nt.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'])
 # df_references_16S = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs_redo_16S.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'])
 
+
+# used = []
 # unique = []
 # sequences = []
 # for key in fasta_file.keys():
@@ -68,7 +70,7 @@ redo2 = [3709, 2007]
 # 			new_primer_code = str(re.sub(full_pattern, '_', new_primer_code))
 
 # 			if new_primer_code == key_primer_code:
-# 				os.rename(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{new_primer_code}', f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_id}')
+# 				# os.rename(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{new_primer_code}', f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_id}')
 
 # 				if new_primer_code not in unique:
 # 					unique.append(new_primer_code)
@@ -78,10 +80,12 @@ redo2 = [3709, 2007]
 # 					seq_record.id = str(primer_id) + '_' + ''.join(key.split('@')[1:])
 # 					df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
 # 					df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
+# 					used.append(str(primer_id) + '_' + ''.join(key.split('@')[1:]))
 # 				else:
 # 					seq_record.id = str(primer_id)
 # 					df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id)
 # 					df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id)
+# 					used.append(str(primer_id))
 # 				seq_record.description = primer_code
 # 				sequences.append(seq_record)
 # 		except Exception as e:
@@ -94,58 +98,67 @@ redo2 = [3709, 2007]
 # with open("/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_redo.fa", "w") as output_handle:
 # 	SeqIO.write(sequences, output_handle, "fasta")
 
-
+# df_references_nt = df_references_nt.loc[df_references_nt['qseqid'].isin(used)].reset_index(drop=True)
+# df_references_16S = df_references_16S.loc[df_references_16S['qseqid'].isin(used)].reset_index(drop=True)
 
 # df_references_nt.to_csv('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_redo_nt.tsv', sep='\t', index=False)
 # df_references_16S.to_csv('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_redo_16S.tsv', sep='\t', index=False)
 # ===========================================================================
 
 # FIRST
-primers = pd.read_csv('primers.csv', sep=';')
-fasta_file = SeqIO.to_dict(SeqIO.parse('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs.fa', "fasta"))
+# primers = pd.read_csv('primers.csv', sep=';')
+# fasta_file = SeqIO.to_dict(SeqIO.parse('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs.fa', "fasta"))
 # df_references_nt = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs_nt.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'])
 # df_references_16S = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs_16S.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'])
 
-
-unique = []
-sequences = []
-for key in fasta_file.keys():
-	key_primer_code = key.split('@')[0]
-
-	# if '_-_' in primer_code:
-	# 	print(fasta_file[key])
-
-	for primer_id, primer_code in zip(primers['id'], primers['code']):
-		try:
-			if primer_code == key_primer_code:
-
-				os.rename(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_code}', f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_id}')
-				if primer_code not in unique:
-					unique.append(primer_code)
-				seq_record = fasta_file[key]
-				if ''.join(key.split('@')[1:]).isnumeric():
-					seq_record.id = str(primer_id) + '_' + ''.join(key.split('@')[1:])
-					# df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
-					# df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
-				else:
-					seq_record.id = str(primer_id)
-					# df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id)
-					# df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id)
-
-				seq_record.description = primer_code
-				sequences.append(seq_record)
+# used = []
+# unique = []
+# sequences = []
+# for key in fasta_file.keys():
+# 	key_primer_code = key.split('@')[0]
 
 
-		except Exception as e:
-			if primer_code == 'LoboR1':
-				print(e)
-print(len(unique))
-print(len(fasta_file.keys()))
-print(len(sequences))
+# 	# if '_-_' in primer_code:
+# 	# 	print(fasta_file[key])
 
-# with open("/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs.fa", "w") as output_handle:
-# 	SeqIO.write(sequences, output_handle, "fasta")
+# 	for primer_id, primer_code in zip(primers['id'], primers['code']):
+# 		try:
+# 			if primer_code == key_primer_code:
 
+# 				# os.rename(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_code}', f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_id}')
+# 				if primer_code not in unique:
+# 					unique.append(primer_code)
+# 				seq_record = fasta_file[key]
+# 				if ''.join(key.split('@')[1:]).isnumeric():
+# 					seq_record.id = str(primer_id) + '_' + ''.join(key.split('@')[1:])
+# 					df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
+# 					df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
+
+# 					used.append(str(primer_id) + '_' + ''.join(key.split('@')[1:]))
+# 				else:
+# 					seq_record.id = str(primer_id)
+# 					df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id)
+# 					df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id)
+
+# 					used.append(str(primer_id))
+
+# 				seq_record.description = primer_code
+# 				sequences.append(seq_record)
+
+
+
+# 		except Exception as e:
+# 			print(e)
+# print(len(unique))
+# print(len(fasta_file.keys()))
+# print(len(sequences))
+
+# # with open("/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs.fa", "w") as output_handle:
+# # 	SeqIO.write(sequences, output_handle, "fasta")
+
+
+# df_references_nt = df_references_nt.loc[df_references_nt['qseqid'].isin(used)].reset_index(drop=True)
+# df_references_16S = df_references_16S.loc[df_references_16S['qseqid'].isin(used)].reset_index(drop=True)
 
 # df_references_nt.to_csv('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_nt.tsv', sep='\t', index=False)
 # df_references_16S.to_csv('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_16S.tsv', sep='\t', index=False)
@@ -158,6 +171,7 @@ print(len(sequences))
 # df_references_nt = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs_redo2_nt.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'])
 # df_references_16S = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/primers_seqs_redo2_16S.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'])
 
+# used = []
 
 # unique = []
 # sequences = []
@@ -177,7 +191,7 @@ print(len(sequences))
 # 				full_pattern = re.compile('[^a-zA-Z0-9_-]')
 # 				new_primer_code = str(re.sub(full_pattern, '_', new_primer_code))
 # 				if new_primer_code == key_primer_code:
-# 					os.rename(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{new_primer_code}', f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_id}')
+# 					# os.rename(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{new_primer_code}', f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/Files/{primer_id}')
 # 					if new_primer_code not in unique:
 # 						unique.append(new_primer_code)
 # 					seq_record = fasta_file[key]
@@ -188,15 +202,17 @@ print(len(sequences))
 # 						df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
 # 						df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id) + '_' + ''.join(key.split('@')[1:])
 						
+# 						used.append(str(primer_id) + '_' + ''.join(key.split('@')[1:]))
 # 					else:
 # 						seq_record.id = str(primer_id)
 # 						df_references_nt.loc[df_references_nt['qseqid'] == key, 'qseqid'] = str(primer_id)
 # 						df_references_16S.loc[df_references_16S['qseqid'] == key, 'qseqid'] = str(primer_id)
+# 						used.append(str(primer_id))
 # 					seq_record.description = primer_code
 # 					sequences.append(seq_record)
 
-# 				print(nt_primer_references)
-# 			except:
+# 			except Exception as e:
+# 				print(e)
 # 				pass
 
 # print(len(unique))
@@ -205,5 +221,7 @@ print(len(sequences))
 # with open("/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_redo2.fa", "w") as output_handle:
 # 	SeqIO.write(sequences, output_handle, "fasta")
 
+# df_references_nt = df_references_nt.loc[df_references_nt['qseqid'].isin(used)].reset_index(drop=True)
+# df_references_16S = df_references_16S.loc[df_references_16S['qseqid'].isin(used)].reset_index(drop=True)
 # df_references_nt.to_csv('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_redo2_nt.tsv', sep='\t', index=False)
 # df_references_16S.to_csv('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/primers_references/REPLACED_FILES/primers_seqs_redo2_16S.tsv', sep='\t', index=False)
