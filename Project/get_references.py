@@ -5,6 +5,13 @@ import os
 import random
 import time
 import re
+import yaml
+
+
+def read_yaml(file_path):
+    with open(file_path, "r") as f:
+        return yaml.safe_load(f)
+
 
 def extend_ambiguous_dna(seq):
 	degenerated_table = {
@@ -41,16 +48,29 @@ def extend_ambiguous_dna(seq):
 	return r
 
 
-def create_fasta(individual_seqs, output_file):
+def create_fasta(primers, output_file):
+	seqs = []
+	for primer_id, primer_code, primer_seq in zip(primers['id'], primers['code'], primers['nuc']):
+		primer_seq_extended = extend_ambiguous_dna(primer_seq)
+		try:
+			if len(primer_seq_extended) == 1:
+				seqs.append((str(primer_id), primer_seq_extended[0]))
+			else:
+				for pos, extended_primer in enumerate(primer_seq_extended):
+					seqs.append((f'{primer_id}_{pos}', extended_primer))
+
+		except:
+			print(primer_code)
+
 	with open(output_file, "w") as fasta_file:
-		for primer_code, seq in individual_seqs:
+		for primer_code, seq in seqs:
 			fasta_record = f">{primer_code}\n{seq}\n"
 			fasta_file.write(fasta_record)
 
 
-def run_blast(fasta_file, output_file, max_target_seqs='10', num_threads='6', database='/media/bioinfo/6tb_hdd/04_Blast_Databases/BLAST_DB_nt/nt'):
+def run_blast(fasta_file, output_file, database, tax_db, max_target_seqs='10', num_threads='1'):
 	subprocess.run(
-		f'export BLASTDB=/media/bioinfo/6tb_hdd/04_Blast_Databases/taxdb && \
+		f'export BLASTDB={tax_db} && \
 		time blastn \
 		-db {database} \
 		-query {fasta_file} \
@@ -72,6 +92,20 @@ def split_and_duplicate(row):
         return pd.Series([valores_divididos[0], pos])
     else:
         return pd.Series([row, row])
+
+
+def clean_blast_results(df_references):
+	df_references['sscinames'] = df_references['sscinames'].str.replace(' ', '_')
+	df_references['sscinames'] = df_references['sscinames'].str.replace('(', '-')
+	df_references['sscinames'] = df_references['sscinames'].str.replace(')', '-')
+
+	full_pattern = re.compile('[^a-zA-Z0-9_-]')
+	df_references['sscinames'] = df_references['sscinames'].str.replace(full_pattern, '_', regex=True)
+
+
+	df_references[['Primer', 'SeqID']] = df_references['qseqid'].apply(split_and_duplicate)
+
+	return df_references
 
 
 def get_gis(df_references, primer_code, primer_seq, max_len, count, selected_organisms, path2save_references):
@@ -108,54 +142,11 @@ def get_gis(df_references, primer_code, primer_seq, max_len, count, selected_org
 
 	return count, selected_organisms, gis_nt, gis_16S
 
-if __name__ == '__main__':
-	path2save_references = '/media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/'
-	primers = pd.read_csv('/media/bioinfo/6tb_hdd/03_ELLEN/02_data/PrimersLocator_FILES/get_references4_more_filtered/primers_filtered.tsv', sep='\t', dtype={'id': 'str'})
-		
-	seqs = []
-	for primer_id, primer_code, primer_seq in zip(primers['id'], primers['code'], primers['nuc']):
-		primer_seq_extended = extend_ambiguous_dna(primer_seq)
 
-		try:
-			if len(primer_seq_extended) == 1:
-				seqs.append((str(primer_id), primer_seq_extended[0]))
-			else:
-				for pos, extended_primer in enumerate(primer_seq_extended):
-					seqs.append((f'{primer_id}_{pos}', extended_primer))
-
-		except:
-			print(primer_code)
-
-	create_fasta(seqs, f'/media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/primers_seqs.fa')
-
-	# print('Rodando BLAST NT')
-	# run_blast(f'./get_references3/primers_seqs.fa', f'./get_references2/primers_seqs_nt.tsv', max_target_seqs='50', num_threads='12')
-	# print('Rodando BLAST 16S')
-	# run_blast(f'./get_references3/primers_seqs.fa', f'./get_references2/primers_seqs_16S.tsv', max_target_seqs='50', num_threads='12', database='/media/bioinfo/6tb_hdd/04_Blast_Databases/16sDB/16S_ribosomal_RNA')
-
-	start = time.process_time()
-
-	df_references_nt = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/PrimersLocator_FILES/get_references4_more_filtered/primers_seqs_nt_more_filtered.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'], dtype={'qseqid': 'str'})
-	df_references_16S = pd.read_csv(f'/media/bioinfo/6tb_hdd/03_ELLEN/02_data/PrimersLocator_FILES/get_references4_more_filtered/primers_seqs_16S_more_filtered.tsv', sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'], dtype={'qseqid': 'str'})
-
-	df_references = pd.concat([df_references_nt, df_references_16S], keys=['nt', '16S']).reset_index()
-	df_references['sscinames'] = df_references['sscinames'].str.replace(' ', '_')
-	df_references['sscinames'] = df_references['sscinames'].str.replace('(', '-')
-	df_references['sscinames'] = df_references['sscinames'].str.replace(')', '-')
-
-	full_pattern = re.compile('[^a-zA-Z0-9_-]')
-	df_references['sscinames'] = df_references['sscinames'].str.replace(full_pattern, '_', regex=True)
-
-
-	df_references[['Primer', 'SeqID']] = df_references['qseqid'].apply(split_and_duplicate)
-
+def get_references(config, df_references, primers):
 	df_references = df_references.sample(frac = 1).reset_index(drop=True)
-
 	df_references = df_references.sort_values(by=['qcovs', 'pident', 'slen'], ascending=[False, False, False]).reset_index(drop=True)
-
 	primer_codes = df_references['Primer'].unique()
-
-
 	gis_nt_list = []
 	gis_16s_list = []
 	for primer_code in primer_codes:		
@@ -167,7 +158,7 @@ if __name__ == '__main__':
 		current_gis_nt = []
 		current_gis_16S = []
 		while count < 10 and len_pos < 6:
-			count, selected_organisms, new_gis_nt, new_gis_16s = get_gis(df_references, primer_code, primer_seq, max_len[len_pos], count, selected_organisms, path2save_references)
+			count, selected_organisms, new_gis_nt, new_gis_16s = get_gis(df_references, primer_code, primer_seq, max_len[len_pos], count, selected_organisms, config['OUTPUT_PATH'])
 			current_gis_nt.extend(new_gis_nt)
 			current_gis_16S.extend(new_gis_16s)
 			len_pos += 1
@@ -176,42 +167,75 @@ if __name__ == '__main__':
 		gis_nt_list.extend(current_gis_nt)
 		gis_16s_list.extend(current_gis_16S)
 
+	return gis_nt_list, gis_16s_list
 
+
+def create_alias(config, gis_nt_list, gis_16s_list):
 	gis_nt = '\n'.join(gis_nt_list)
-	with open('/media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/gi_list_nt.txt', 'w') as f:
+	with open(f"{config['OUTPUT_PATH']}gi_list_nt.txt", 'w') as f:
 		f.write(gis_nt)
 
 	gis_16S = '\n'.join(gis_16s_list)
-	with open('/media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/gi_list_16S.txt', 'w') as f:
+	with open(f"{config['OUTPUT_PATH']}gi_list_16S.txt", 'w') as f:
 		f.write(gis_16S)
 
+	# blastdb_aliastool -gilist gi_list_nt.txt -db /media/bioinfo/6tb_hdd/04_Blast_Databases/new_nt/nt -out primers_references_nt -title "primers_references_nt" -dbtype nucl
 
 	subprocess.run(
-		f"blastdb_aliastool -gilist /media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/gi_list_16S.txt -db /media/bioinfo/6tb_hdd/04_Blast_Databases/16sDB/16S_ribosomal_RNA -dbtype nucl -out /media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/primers_references_16s -title primers_references_16s",
+		f"cd {config['OUTPUT_PATH']} && \
+		blastdb_aliastool -gilist gi_list_16S.txt -db {config['16S_DB_PATH']} -out primers_references_16s -title primers_references_16s -dbtype nucl",
 		shell=True,
 		executable='/bin/bash'
 	)
 
 	subprocess.run(
-		f"blastdb_aliastool -gilist /media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/gi_list_nt.txt -db /media/bioinfo/6tb_hdd/04_Blast_Databases/BLAST_DB_nt/nt -dbtype nucl -out /media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/primers_references_nt -title primers_references_nt",
+		f"cd {config['OUTPUT_PATH']} && \
+		blastdb_aliastool -gilist gi_list_nt.txt -db {config['NT_DB_PATH']} -dbtype nucl -out primers_references_nt -title primers_references_nt",
 		shell=True,
 		executable='/bin/bash'
 	)
 
 
-	# subprocess.run(
-	# 	f"blastdbcmd -db /media/bioinfo/6tb_hdd/04_Blast_Databases/BLAST_DB_nt/nt -dbtype 'nucl' -entry_batch /media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/gi_list_nt.txt -out /media/bioinfo/6tb_hdd/03_ELLEN/02_data/PrimersLocator_FILES/get_references4_more_filtered/all_references_nt.fa",
-	# 	shell=True,
-	# 	executable='/bin/bash'
-	# )
+def run():
+	config = read_yaml('config.yaml')
+	primers = pd.read_csv(config['PRIMERS'], sep='\t', dtype={'id': 'str'})
+		
+	create_fasta(primers, f"{config['OUTPUT_PATH']}primers_seqs.fa")
 
-	# subprocess.run(
-	# 	f"blastdbcmd -db /media/bioinfo/6tb_hdd/04_Blast_Databases/16sDB/16S_ribosomal_RNA -dbtype 'nucl' -entry_batch /media/bioinfo/6tb_hdd/03_ELLEN/02_data/PrimersLocator_FILES/get_references4_more_filtered/gi_list_16S.txt -out /media/bioinfo/6tb_hdd/03_ELLEN/02_data/PrimersLocator_FILES/get_references4_more_filtered/all_references_16S.fa",
-	# 	shell=True,
-	# 	executable='/bin/bash'
-	# )
+	# print('Rodando BLAST NT')
+	# run_blast(f"{config['OUTPUT_PATH']}primers_seqs.fa", f"{config['OUTPUT_PATH']}primers_seqs_nt.tsv", database=config['NT_DB_PATH'], tax_db=config['TAX_DB_PATH'], max_target_seqs='50', num_threads=config['THREADS'])
+	# print('Rodando BLAST 16S')
+	# run_blast(f"{config['OUTPUT_PATH']}primers_seqs.fa", f"{config['OUTPUT_PATH']}primers_seqs_16S.tsv", database=config['16S_DB_PATH'], tax_db=config['TAX_DB_PATH'], max_target_seqs='50', num_threads=config['THREADS'])
 
-	end = time.process_time()
-	total = end - start
+	df_references_nt = pd.read_csv(f"{config['OUTPUT_PATH']}primers_seqs_nt.tsv", sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'], dtype={'qseqid': 'str'})
+	df_references_16S = pd.read_csv(f"{config['OUTPUT_PATH']}primers_seqs_16S.tsv", sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'], dtype={'qseqid': 'str'})
 
-	print('Tempo para download de sequencias: ', total)
+	df_references = pd.concat([df_references_nt, df_references_16S], keys=['nt', '16S']).reset_index()
+	df_references = clean_blast_results(df_references)
+
+	gis_nt_list, gis_16s_list = get_references(config, df_references, primers)
+
+	create_alias(config, gis_nt_list, gis_16s_list)
+
+
+
+if __name__ == '__main__':
+	config = read_yaml('config.yaml')
+	primers = pd.read_csv(config['PRIMERS'], sep='\t', dtype={'id': 'str'})
+		
+	create_fasta(primers, f"{config['OUTPUT_PATH']}primers_seqs.fa")
+
+	print('Rodando BLAST NT')
+	run_blast(f"{config['OUTPUT_PATH']}primers_seqs.fa", f"{config['OUTPUT_PATH']}primers_seqs_nt.tsv", database=config['NT_DB_PATH'], tax_db=config['TAX_DB_PATH'], max_target_seqs='50', num_threads=config['THREADS'])
+	print('Rodando BLAST 16S')
+	run_blast(f"{config['OUTPUT_PATH']}primers_seqs.fa", f"{config['OUTPUT_PATH']}primers_seqs_16S.tsv", database=config['16S_DB_PATH'], tax_db=config['TAX_DB_PATH'], max_target_seqs='50', num_threads=config['THREADS'])
+
+	df_references_nt = pd.read_csv(f"{config['OUTPUT_PATH']}primers_seqs_nt.tsv", sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'], dtype={'qseqid': 'str'})
+	df_references_16S = pd.read_csv(f"{config['OUTPUT_PATH']}primers_seqs_16S.tsv", sep='\t', names=['qseqid', 'pident', 'gaps', 'qcovs', 'mismatch', 'evalue', 'score', 'bitscore', 'sgi', 'sacc', 'slen', 'stitle', 'sscinames'], dtype={'qseqid': 'str'})
+
+	df_references = pd.concat([df_references_nt, df_references_16S], keys=['nt', '16S']).reset_index()
+	df_references = clean_blast_results(df_references)
+
+	gis_nt_list, gis_16s_list = get_references(config, df_references, primers)
+
+	create_alias(config, gis_nt_list, gis_16s_list)

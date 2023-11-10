@@ -1,0 +1,6 @@
+OUTPUT_PATH: test/output/ # '/media/bioinfo/6tb_hdd/03_ELLEN/test_blastdb_gilist/test2/'
+PRIMERS: test/primers.tsv # '/media/bioinfo/6tb_hdd/03_ELLEN/02_data/PrimersLocator_FILES/get_references4_more_filtered/primers_filtered.tsv'
+THREADS: 12
+TAX_DB_PATH: '/media/bioinfo/6tb_hdd/04_Blast_Databases/taxdb'
+NT_DB_PATH: '/media/bioinfo/6tb_hdd/04_Blast_Databases/BLAST_DB_nt/nt'
+16S_DB_PATH: '/media/bioinfo/6tb_hdd/04_Blast_Databases/16sDB/16S_ribosomal_RNA'

@@ -1,0 +1,1 @@
+Para criar o alias, todos os arquivos, com exceção da referência do banco BLAST, devem estar no mesmo diretório em que o comando está sendo executado.
