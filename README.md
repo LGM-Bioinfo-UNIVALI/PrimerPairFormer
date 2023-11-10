@@ -1,2 +1,2 @@
-# PrimerLocator
+# PrimerPairFormer
  
