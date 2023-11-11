@@ -140,7 +140,7 @@ def get_primers_pairs(primers_alignment_data, primers):
 		common_organisms = get_common_organisms(primers_alignment_data[pair[0]], primers_alignment_data[pair[1]])
 
 		orientations = []
-		if len(common_organisms) >= 5:  # pelo menos metade das referencias são comun entre eles 
+		if len(common_organisms) >= 15:  # pelo menos metade das referencias são comun entre eles 
 			for organism in common_organisms:
 				check = check_product_size(primers_alignment_data[pair[0]], primers_alignment_data[pair[1]], organism)
 				if check:
@@ -148,7 +148,7 @@ def get_primers_pairs(primers_alignment_data, primers):
 					if pair_orientation is not None:
 						orientations.append(pair_orientation)
 
-		if len(orientations) >= 5:
+		if len(orientations) >= 15:
 			print(f'\tPar {pos} aceito, orientação:', mode(orientations))
 			accepted_pairs.append(mode(orientations))
 
